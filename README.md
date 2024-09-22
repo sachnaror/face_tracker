@@ -52,6 +52,7 @@ We welcome contributions to this project! If you have any suggestions or improve
 
 This project is licensed under the MIT License. See the `LICENSE` file for more details.
 
+## App Structure
 
 ```
 ├── face_tracker/
