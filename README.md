@@ -1,6 +1,6 @@
 # Face Tracking Django App using OpenCV
 
-This Django application tracks your face in real-time using **OpenCV**. As you move, the app draws a rectangle around your face and follows it. It captures live video from your webcam and displays it on a webpage. The application also sends SMS alerts for unrecognized face detection using Twilio's API.
+This python app-on-camera tracks your face in real-time. Sends SMS alerts for unrecognized faces. Red Tracker=Known face, Green=Unknown face.  
 
 ## Features
 - Real-time face detection using OpenCV.
