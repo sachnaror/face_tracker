@@ -26,3 +26,68 @@ Optional for advanced face detection:
 ## Installation and Setup
 
 ### 1. Clone the Repository
+
+### 2. Install Dependencies
+
+### 3. Configure Environment Variables
+
+Create a `.env` file in the root directory and add your Twilio API credentials:
+
+```
+TWILIO_ACCOUNT_SID=your_account_sid
+TWILIO_AUTH_TOKEN=your_auth_token
+TWILIO_PHONE_NUMBER=your_twilio_number
+RECEIVER_PHONE_NUMBER=your_receiver_number
+DEBUG=True
+```
+
+### 4. Run the Django Development Server
+
+```bash
+python manage.py runserver
+```
+
+### 5. Access the Application
+
+Open your web browser and navigate to `http://127.0.0.1:8000/`. You should see your webcam feed.
+
+## Usage
+
+1. **Adding Recognized Faces**: You can add recognized faces by placing images in the specified directory and using the `/add_face/` endpoint to upload them.
+2. **Face Tracking**: The application will automatically track your face and send an SMS alert if an unrecognized face is detected.
+
+## Contributing
+
+We welcome contributions to this project! If you have any suggestions or improvements, please feel free to submit a pull request.
+
+## License
+
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
+
+## App Structure
+
+```
+├── face_tracker/
+│   ├── requirements.txt
+│   ├── db.sqlite3
+│   ├── README.md
+│   ├── .env
+│   ├── manage.py
+│   ├── face_tracker/
+│   │   ├── asgi.py
+│   │   ├── settings.py
+│   │   ├── urls.py
+│   │   └── wsgi.py
+│   ├── tracking/
+│   │   ├── models.py
+│   │   ├── apps.py
+│   │   ├── camera.py
+│   │   ├── admin.py
+│   │   ├── tests.py
+│   │   ├── urls.py
+│   │   └── views.py
+│   │   ├── templates/
+│   │   │   └── index.html
+```
+
+```
