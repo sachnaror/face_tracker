@@ -64,10 +64,10 @@ class VideoCamera:
 
     def send_sms_alert(self):
         try:
-            account_sid = os.getenv('TWILIO_ACCOUNT_SID')
-            auth_token = os.getenv('TWILIO_AUTH_TOKEN')
+            account_sid = os.getenv('AC8dfd6e4d3a63944599ds676ef3de449782d9')
+            auth_token = os.getenv('2891eef1441esd52e31597f33e3c57ece627')
             from_number = os.getenv('TWILIO_PHONE_NUMBER')
-            to_number = os.getenv('RECEIVER_PHONE_NUMBER')
+            to_number = os.getenv('9560330483')
 
             message = "Alert! An unrecognized person has been detected."
             url = f"https://api.twilio.com/2010-04-01/Accounts/{account_sid}/Messages.json"
