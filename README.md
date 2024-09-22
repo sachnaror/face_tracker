@@ -1,6 +1,7 @@
 # Face Tracking Django App using OpenCV
 
-This python app-on-camera tracks your face in real-time. Sends SMS alerts for unrecognized faces. Red Tracker=Known face, Green=Unknown face.  
+This python app-on-camera tracks your face in real-time. Sends SMS alerts for unrecognized faces. 
+Red Tracker=Known face, Green=Unknown face.  
 
 ## Features
 - Real-time face detection using OpenCV.
