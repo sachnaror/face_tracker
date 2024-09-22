@@ -15,15 +15,18 @@ class VideoCamera:
     def get_frame(self):
         ret, frame = self.video.read()
 
+        if not ret:
+            raise ValueError("Failed to capture frame from camera")
+
         # Convert to grayscale for faster face detection
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
         # Detect faces in the frame
         faces = self.face_cascade.detectMultiScale(gray, scaleFactor=1.3, minNeighbors=5)
 
-        # Draw rectangle around the detected face(s)
+        # Draw rectangle around the detected face(s) with red color and 8 px thickness
         for (x, y, w, h) in faces:
-            cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 0), 2)
+            cv2.rectangle(frame, (x, y), (x+w, y+h), (255, 0, 0), 8)
 
         # Encode the frame to send it as a stream to the webpage
         ret, jpeg = cv2.imencode('.jpg', frame)
