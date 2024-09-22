@@ -1,6 +1,6 @@
 # Face Tracking Django App using OpenCV
 
-This Django application tracks your face in real-time using **OpenCV**. As you move, the app draws a rectangle around your face and follows it. It captures live video from your webcam and displays it on a webpage. Extend this by using TensorFlow’s Object Detection API for more advanced models if needed. 
+This Django application tracks your face in real-time using **OpenCV**. As you move, the app draws a rectangle around your face and follows it. It captures live video from your webcam and displays it on a webpage. Extend this by using TensorFlow’s Object Detection API for more advanced models if needed.
 
 ## Features
 - Real-time face detection using OpenCV.
@@ -31,7 +31,7 @@ cd face-tracking-django-app
 ### 2. Install Dependencies
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.txt (i havent updated this app)
 ```
 
 ### 3. Run the Django Development Server
@@ -52,4 +52,27 @@ We welcome contributions to this project! If you have any suggestions or improve
 
 This project is licensed under the MIT License. See the `LICENSE` file for more details.
 
+
+```
+├── face_tracker/
+│   ├── requirements.txt (i havent updated this app)
+│   ├── db.sqlite3
+│   ├── README.md
+│   ├── .env
+│   ├── manage.py
+│   ├── face_tracker/
+│   │   ├── asgi.py
+│   │   ├── settings.py
+│   │   ├── urls.py
+│   │   └── wsgi.py
+│   ├── tracking/
+│   │   ├── models.py
+│   │   ├── apps.py
+│   │   ├── camera.py
+│   │   ├── admin.py
+│   │   ├── tests.py
+│   │   ├── urls.py
+│   │   └── views.py
+│   │   ├── templates/
+│   │   │   └── index.html
 
