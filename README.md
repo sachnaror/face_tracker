@@ -67,8 +67,9 @@ This project is licensed under the MIT License. See the `LICENSE` file for more 
 ## App Structure
 
 ```
+
 ├── face_tracker/
-│   ├── requirements.txt
+│   ├── requirements.txt (i left it empty)
 │   ├── db.sqlite3
 │   ├── README.md
 │   ├── .env
@@ -88,6 +89,3 @@ This project is licensed under the MIT License. See the `LICENSE` file for more 
 │   │   └── views.py
 │   │   ├── templates/
 │   │   │   └── index.html
-```
-
-```
