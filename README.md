@@ -1,7 +1,7 @@
 # App-on-Camera tracks faces live; SMS u for unrecognized face photo link.
 
 This python app-on-camera tracks your face in real-time. Sends SMS alerts for unrecognized faces. 
-Red Tracker=Known face, Green=Unknown face.  
+Red Tracker=UnKnown face, Green=known face.  
 
 ## Features
 - Real-time face detection using OpenCV.
