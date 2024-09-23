@@ -1,6 +1,6 @@
 # 👻 Face Tracker: The Ghostbuster of Security Camera!
 
-Welcome to **Face Tracker**, the ultimate Django application that not only tracks people i.e. faces in real-time but also sends you SMS alerts with photo-link (i used Firestore) when an unrecognized face photobombs your security camera! Whether it's a friend sneaking up on you or a ghost trying to make an appearance, this app has got your back (and your front), with alerts like: 
+Welcome to **Face Tracker**, a Voodoo Django application that not only detects people i.e. faces in real-time but also sends you SMS alerts with photo-link (i used Firestore) when an unrecognized face photobombs your security camera! Whether it's a friend sneaking up on you or a ghost trying to make an appearance, this app has got your back (and your front), with alerts like: 
 
 SMS Example: 
 
