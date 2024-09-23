@@ -116,6 +116,9 @@ This project is licensed under the MIT License. See the `LICENSE` file for more 
 ```
 
 ## 🎭 Final Thoughts
-With **Face Tracker**, you can keep an eye on your surroundings while having a bit of fun. Whether you're monitoring your home or just want to see who’s sneaking up on you, this app is your trusty sidekick. So, get ready to track those faces and send some ghostly SMS alerts!
+
+Who doesn't wanna know what his/her grand grand pa's ghost is lurking around for and came to visit them suddenly from 7th heaven ?
+
+With **Face Tracker**, you can keep an eye on your surroundings while having a bit of fun.  Whether you're monitoring your home or just want to see who’s sneaking up on you, this app is your trusty sidekick. So, get ready to track those faces and send some ghostly SMS alerts!
 
 Happy tracking! 👻
