@@ -4,6 +4,8 @@ Welcome to **Face Tracker**, the ultimate Django application that not only track
 
 "A ghost just photobombed ::: time to kick an ectoplasmic butt > http://fa.ly/photo". 
 
+Note: 
+
 Make sure your camera’s IP address is static or use a dynamic DNS service to keep it accessible. If you’re accessing the camera from another city, ensure that your internet connection and firewall settings allow external access.
 
 In case it is DDNS, the url, to access cam, would be somewhat liek this : ip_camera_url = "http://mycamera.ddns.net:8080/video"
