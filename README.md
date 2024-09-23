@@ -1,7 +1,7 @@
 # App-on-Camera tracks faces live; SMS you for an unrecognized face photo link.
 
-This python app-on-camera tracks your face in real-time. Sends SMS alerts for unrecognized faces. 
-Red Tracker=UnKnown face, Green=known face.  
+This python app-on-camera tracks your face in real-time. Sends SMS alerts for unrecognized faces.
+Red Tracker=UnKnown face, Green=known face.
 
 ## Features
 - Real-time face detection using OpenCV.
@@ -68,13 +68,15 @@ This project is licensed under the MIT License. See the `LICENSE` file for more 
 ## App Structure
 
 ```
-
 ├── face_tracker/
-│   ├── requirements.txt (i left it empty)
+│   ├── requirements.txt
 │   ├── db.sqlite3
 │   ├── README.md
 │   ├── .env
 │   ├── manage.py
+│   ├── config/
+│   │   ├── firebase-adminsdk.json
+│   │   └── firebase_config.py
 │   ├── face_tracker/
 │   │   ├── asgi.py
 │   │   ├── settings.py
@@ -85,6 +87,7 @@ This project is licensed under the MIT License. See the `LICENSE` file for more 
 │   │   ├── apps.py
 │   │   ├── camera.py
 │   │   ├── admin.py
+│   │   ├── utils.py
 │   │   ├── tests.py
 │   │   ├── urls.py
 │   │   └── views.py
