@@ -28,7 +28,7 @@ Optional for advanced face detection:
 
 ### 2. Install Dependencies
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.txt (i ahvent filled this file, i'm too lazy to fill this up)
 ```
 
 ### 3. Configure Environment Variables
