@@ -2,6 +2,10 @@
 
 Welcome to **Face Tracker**, the ultimate Django application that not only tracks your face in real-time but also sends you SMS alerts with photo-link (i used firestore) when an unrecognized face photobombs your webcam! Whether it's a friend sneaking up on you or a ghost trying to make an appearance, this app has got your back (and your front)!
 
+Make sure your camera’s IP address is static or use a dynamic DNS service to keep it accessible. If you’re accessing the camera from another city, ensure that your internet connection and firewall settings allow external access.
+
+In case its DDNS, the url, to access cam, would be somewhat liek this : ip_camera_url = "http://mycamera.ddns.net:8080/video"
+
 ## 🎉 Features
 - **Real-time Face Detection**: Using OpenCV, this app can detect faces faster than you can say "cheese!"
 - **Face Tracking**: Move left, right, or do a little dance, and watch as the app follows your every move.
@@ -27,8 +31,12 @@ Optional for advanced face detection:
 ### 1. Clone the Repository
 
 ### 2. Install Dependencies
+
+i haven't filled this file, i'm too lazy to fill this up
+
 ```bash
-pip install -r requirements.txt (i ahvent filled this file, i'm too lazy to fill this up)
+pip install -r requirements.txt
+
 ```
 
 ### 3. Configure Environment Variables
@@ -50,9 +58,13 @@ python manage.py runserver
 Open your web browser and navigate to `http://127.0.0.1:8000/`. For ip_camera_url = "http://49.115.190.152:8080/video" (change the IP that you have). You should see your webcam feed. Smile for the camera!
 
 ## 📸 Usage
+
 1. **Adding Recognized Faces**: You can add recognized faces by placing images in the specified directory and using the `/add_face/` endpoint to upload them.
 2. **Face Tracking**: The application will automatically track your face and send an SMS alert if an unrecognized face is detected. Perfect for keeping unwanted guests at bay!
 
+Your `views.py` file currently focuses on adding recognized faces from Firestore and streaming the video feed. The handling of unknown faces and sending SMS alerts is primarily managed in your `camera.py` file, particularly in the `VideoCamera` class.
+
+### Here’s how it works:
 
 1. **Camera.py:**
    - In the `get_frame` method, unknown faces are detected, and their images are uploaded to Firestore.
@@ -61,7 +73,6 @@ Open your web browser and navigate to `http://127.0.0.1:8000/`. For ip_camera_ur
 2. **Views.py:**
    - You don’t need to add any code specifically for handling unknown faces here unless you want to create a separate view to display or manage those unknown face records.
    - If you want to implement features like viewing unknown faces in your web app or managing them, you can add new views and templates for that purpose.
-
 
 ## 🤝 Contributing
 We welcome contributions to this project! If you have any suggestions, improvements, or just want to share a funny ghost story, please feel free to submit a pull request.
