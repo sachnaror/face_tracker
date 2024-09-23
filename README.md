@@ -1,10 +1,12 @@
 # 👻 Face Tracker: The Ghostbuster of Your Webcam!
 
-Welcome to **Face Tracker**, the ultimate Django application that not only tracks your face in real-time but also sends you SMS alerts with photo-link (i used firestore) when an unrecognized face photobombs your webcam! Whether it's a friend sneaking up on you or a ghost trying to make an appearance, this app has got your back (and your front)!
+Welcome to **Face Tracker**, the ultimate Django application that not only tracks your face in real-time but also sends you SMS alerts with photo-link (i used Firestore) when an unrecognized face photobombs your webcam! Whether it's a friend sneaking up on you or a ghost trying to make an appearance, this app has got your back (and your front), with alerts like: 
+
+"A ghost just photobombed ::: time to kick an ectoplasmic butt > http://fa.ly/photo". 
 
 Make sure your camera’s IP address is static or use a dynamic DNS service to keep it accessible. If you’re accessing the camera from another city, ensure that your internet connection and firewall settings allow external access.
 
-In case its DDNS, the url, to access cam, would be somewhat liek this : ip_camera_url = "http://mycamera.ddns.net:8080/video"
+In case it is DDNS, the url, to access cam, would be somewhat liek this : ip_camera_url = "http://mycamera.ddns.net:8080/video"
 
 ## 🎉 Features
 - **Real-time Face Detection**: Using OpenCV, this app can detect faces faster than you can say "cheese!"
