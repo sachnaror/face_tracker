@@ -4,19 +4,7 @@
 *.pyc
 /media/
 /static/
-__pycache__
 db.sqlite3
-# Ignore Firebase credentials
 config/firebase-adminsdk.json
-# Ignore Firebase credentials
-config/firebase-adminsdk.json
-
 # Optionally, ignore the entire config directory if it contains only sensitive data
 # config/
-
-__pycache__/
-*.pyc
-
-
-# Ignore media uploads (optional, depending on your project)
-media/
