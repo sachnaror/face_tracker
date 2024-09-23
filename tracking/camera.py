@@ -7,7 +7,7 @@ import requests
 from config.firebase_config import bucket, db
 from django.utils import timezone
 
-from .firebase_config import bucket, db
+from .utils import upload_image_to_firebase
 
 
 class VideoCamera:
@@ -33,6 +33,9 @@ class VideoCamera:
 
     def get_frame(self):
         ret, frame = self.video.read()
+        if not ret:
+            return None  # Added check for successful frame capture
+
         rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
         # Detect faces and get encodings
@@ -48,9 +51,10 @@ class VideoCamera:
                 first_match_index = matches.index(True)
                 name = self.known_face_names[first_match_index]
             else:
-                # Unknown face detected, take screenshot and send SMS
+                # Handle unknown face
                 screenshot_url = self.handle_unknown_face(frame, face_location)
-                self.send_sms_alert(screenshot_url)
+                if screenshot_url:
+                    self.send_sms_alert(screenshot_url)
 
             # Draw rectangle around face
             top, right, bottom, left = face_location
@@ -90,7 +94,7 @@ class VideoCamera:
         account_sid = 'YOUR_TWILIO_ACCOUNT_SID'
         auth_token = 'YOUR_TWILIO_AUTH_TOKEN'
         from_number = 'YOUR_TWILIO_PHONE_NUMBER'
-        to_number = '+919560330483'  # Your phone number
+        to_number = '+919565330483'  # Your phone number
 
         message = f"Alert! A ghost just photobombed, time to kick some ectoplasmic butt! 👻💥: {screenshot_url}"
 
