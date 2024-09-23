@@ -2,6 +2,8 @@
 
 Welcome to **Face Tracker**, the ultimate Django application that not only tracks your face in real-time but also sends you SMS alerts with photo-link (i used Firestore) when an unrecognized face photobombs your webcam! Whether it's a friend sneaking up on you or a ghost trying to make an appearance, this app has got your back (and your front), with alerts like: 
 
+SMS Example: 
+
 "A ghost just photobombed ::: time to kick an ectoplasmic butt > http://fa.ly/photo". 
 
 Note: 
