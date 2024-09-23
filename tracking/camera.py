@@ -13,7 +13,7 @@ from .utils import upload_image_to_firebase
 class VideoCamera:
     def __init__(self):
         # Replace with the camera IP
-        ip_camera_url = "http://45.115.190.172:8080/video"
+        ip_camera_url = "http://49.115.190.152:8080/video"
         self.video = cv2.VideoCapture(ip_camera_url)
         self.known_face_encodings = []
         self.known_face_names = []

@@ -26,8 +26,28 @@ Optional for advanced face detection:
 
 ### 1. Clone the Repository
 
+### 2. Install Dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Configure Environment Variables
+Create a `.env` file in the root directory and add your Twilio API credentials:
+```
+TWILIO_ACCOUNT_SID=your_account_sid
+TWILIO_AUTH_TOKEN=your_auth_token
+TWILIO_PHONE_NUMBER=your_twilio_number
+RECEIVER_PHONE_NUMBER=your_receiver_number
+DEBUG=True
+```
+
+### 4. Run the Django Development Server
+```bash
+python manage.py runserver
+```
+
 ### 5. Access the Application
-Open your web browser and navigate to `http://127.0.0.1:8000/`. You should see your webcam feed. Smile for the camera!
+Open your web browser and navigate to `http://127.0.0.1:8000/`. For ip_camera_url = "http://49.115.190.152:8080/video" (change the IP that you have). You should see your webcam feed. Smile for the camera!
 
 ## 📸 Usage
 1. **Adding Recognized Faces**: You can add recognized faces by placing images in the specified directory and using the `/add_face/` endpoint to upload them.
