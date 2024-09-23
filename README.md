@@ -1,6 +1,6 @@
 # 👻 Face Tracker: The Ghostbuster of Your Webcam!
 
-Welcome to **Face Tracker**, the ultimate Django application that not only tracks your face in real-time but also sends you SMS alerts when an unrecognized face photobombs your webcam! Whether it's a friend sneaking up on you or a ghost trying to make an appearance, this app has got your back (and your front)!
+Welcome to **Face Tracker**, the ultimate Django application that not only tracks your face in real-time but also sends you SMS alerts with photo-link (i used firestore) when an unrecognized face photobombs your webcam! Whether it's a friend sneaking up on you or a ghost trying to make an appearance, this app has got your back (and your front)!
 
 ## 🎉 Features
 - **Real-time Face Detection**: Using OpenCV, this app can detect faces faster than you can say "cheese!"
@@ -32,6 +32,16 @@ Open your web browser and navigate to `http://127.0.0.1:8000/`. You should see y
 ## 📸 Usage
 1. **Adding Recognized Faces**: You can add recognized faces by placing images in the specified directory and using the `/add_face/` endpoint to upload them.
 2. **Face Tracking**: The application will automatically track your face and send an SMS alert if an unrecognized face is detected. Perfect for keeping unwanted guests at bay!
+
+
+1. **Camera.py:**
+   - In the `get_frame` method, unknown faces are detected, and their images are uploaded to Firestore.
+   - The public URL of the uploaded image is sent via SMS using the `send_sms_alert` method.
+
+2. **Views.py:**
+   - You don’t need to add any code specifically for handling unknown faces here unless you want to create a separate view to display or manage those unknown face records.
+   - If you want to implement features like viewing unknown faces in your web app or managing them, you can add new views and templates for that purpose.
+
 
 ## 🤝 Contributing
 We welcome contributions to this project! If you have any suggestions, improvements, or just want to share a funny ghost story, please feel free to submit a pull request.
